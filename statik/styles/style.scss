@@ -1,3 +1,4 @@
+@import 'registration-style';
 @import 'vars';
 
 
@@ -180,7 +181,13 @@ label {
 
         display: flex;
         gap: 10px;
+    }
 
+    &__breadcrumbs a:hover {
+        color: $main_color;
+    }
+
+    &__link {
         color: #636363;
         font-size: 14px;
         font-style: normal;
@@ -188,16 +195,17 @@ label {
         line-height: normal;
     }
 
-    &__breadcrumbs a:hover {
-        color: $main_color;
-    }
-
     &__li:not(:last-child):after {
-        content: '\/';
+        content: '/';
         padding-left: 10px;
+        color: #636363;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
     }
 
-    &__li:last-child {
+    &__li:last-child .top-head__link {
         font-weight: bold;
         color: #fa008e;
     }
@@ -838,7 +846,6 @@ label {
     &__button:hover {
         background-color: #F16D7F;
         color: #fff;
-        transition: .3s;
     }
 
     &__info {
@@ -867,6 +874,15 @@ label {
             border: 1px solid #A4A4A4
         }
 
+        &__address-input::placeholder{
+            color: #222;
+            font-family: Lato;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+        }
+
         &__address-submit {
             padding: 10px 12px;
             width: 102px;
@@ -881,12 +897,6 @@ label {
             border: 1px solid #A4A4A4;
 
             cursor: pointer;
-        }
-
-        &__address-submit:hover {
-            background-color: #F16D7F;
-            color: #fff;
-            transition: .3s;
         }
     }
 
@@ -1047,7 +1057,7 @@ label {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: 223.26px;
 
